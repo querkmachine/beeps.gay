@@ -14,8 +14,12 @@
         container-type: inline-size;
       }
 
+      header {
+        isolation: isolate;
+      }
+
       h1 span {
-        color: var(--color-accent);
+        box-shadow: inset 0 -1.5ex 0 var(--color-surface);
       }
 
       footer {
@@ -30,10 +34,9 @@
       @container (min-inline-size: 40ch) {
         .page-image {
           inline-size: max(30cqi, 25ch);
-          float: inline-end;
-          margin-inline-end: max(-10cqi, -12ch);
-          shape-outside: url("image.png");
-          shape-margin: var(--space-7);
+          float: inline-start;
+          margin-inline-start: max(-10cqi, -12ch);
+          margin-inline-end: var(--space-4);
         }
       }
 
@@ -72,17 +75,19 @@
     <title>beeps.gay</title>
   </head>
   <body>
-    <img
-      class="page-image"
-      alt="A blach, white and green amphimorpho stuck to a wall, looking at the viewer with a manic stare and a dripping, teeth-filled mouth."
-      src="image.png"
-    />
+    <header>
+      <img
+        class="page-image"
+        alt="A blach, white and green amphimorpho stuck to a wall, looking at the viewer with a manic stare and a dripping, teeth-filled mouth."
+        src="image.png"
+      />
 
-    <h1>
-      Where to find
-      <span>beeps</span>
-      on the internet
-    </h1>
+      <h1>
+        Where to find
+        <span>beeps</span>
+        on the internet
+      </h1>
+    </header>
 
     <p>
       For the rest of the Software Bundle system, check out our website at
