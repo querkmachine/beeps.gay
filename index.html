@@ -2,6 +2,8 @@
 <html lang="en-GB" dir="ltr">
   <head>
     <meta charset="UTF-8" />
+    <title>beeps.gay &mdash; where to find beeps on the internet</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <link
@@ -10,29 +12,30 @@
       media="all"
     />
     <style>
+      :root {
+        --grid-max-width: 65ch;
+      }
+
+      html {
+        padding-inline: var(--space-6);
+      }
+
       body {
         container-type: inline-size;
       }
 
       header {
         isolation: isolate;
+        margin-block-end: var(--space-9);
       }
 
-      h1 span {
-        box-shadow: inset 0 -1.5ex 0 var(--color-surface);
-      }
-
-      footer {
-        margin-block-start: var(--space-9);
-      }
-
-      .page-image {
+      header img {
         margin-block-start: calc(0px - var(--space-8));
-        margin-block-end: var(--space-6);
+        margin-block-end: 0;
       }
 
       @container (min-inline-size: 40ch) {
-        .page-image {
+        header img {
           inline-size: max(30cqi, 25ch);
           float: inline-start;
           margin-inline-start: max(-10cqi, -12ch);
@@ -40,36 +43,67 @@
         }
       }
 
+      main {
+        display: grid;
+        gap: var(--grid-gutter);
+        grid-template-columns: repeat(auto-fill, minmax(25ch, 1fr));
+      }
+
+      footer {
+        margin-block-start: var(--space-9);
+      }
+
       h1 {
         margin-block-start: 0;
       }
 
-      .page-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: var(--space-3);
-        padding: 0;
-        list-style-type: square;
-      }
-
-      .page-list li {
-        display: inline-block;
+      h2 {
         margin: 0;
+        margin-block-end: var(--space-1);
+        font-size: var(--size-1);
+        font-stretch: 125%;
       }
 
-      .page-list a {
-        display: block;
-        padding-block: var(--space-1);
-        padding-inline: var(--space-3);
-        border: 1px solid currentcolor;
-        border-radius: 1rem;
-        color: var(--color-link);
+      section {
+        padding-block-start: var(--space-5);
+        padding-block-end: var(--space-4);
+        padding-inline: var(--space-4);
+        border-block-start: var(--border-thick) solid var(--color-furniture);
+        position: relative;
+        background-color: var(--color-surface);
+      }
+
+      .emojo {
+        padding: var(--space-2);
+        border-radius: 50%;
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-start: 0;
+        transform: translate(-1px, -50%);
+        border: var(--border-regular) solid var(--color-furniture);
+        background-color: var(--color-surface);
+        font-size: var(--size-2);
+        line-height: 1;
+      }
+
+      @container (min-inline-size: 40ch) {
+        .emojo {
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      ul li + li {
+        margin-block-start: var(--space-1);
+      }
+
+      ul a {
         text-decoration: none;
-        white-space: nowrap;
-      }
-
-      .page-list a:hover {
-        background-color: var(--color-link-underline-visited);
       }
     </style>
     <title>beeps.gay</title>
@@ -83,122 +117,157 @@
       />
 
       <h1>
-        Where to find
-        <span>beeps</span>
-        on the internet
+        Where to find beeps on the internet
       </h1>
     </header>
 
-    <p>
-      For the rest of the Software Bundle system, check out our website at
-      <a href="//bundle.software">bundle.software</a>.
-    </p>
+    <main>
 
-    <h2>Regular haunts</h2>
-    <p>Websites and services I somewhat actively use and update.</p>
-    <ul class="page-list">
-      <li><a href="//beeps.website">beeps.website</a></li>
-      <li>
-        <a href="//crittertime.fun/memberlist.php?mode=viewprofile&u=179"
-          >Critter Time</a
-        >
-      </li>
-      <li><a href="//github.com/querkmachine">GitHub</a></li>
-      <li>
-        <a href="//knockout.chat/user/15201">Knockout</a>
-      </li>
-      <li>
-        <a href="//social.beeps.gay/@beeps" rel="me">Mastodon</a>
-      </li>
-    </ul>
+      <section>
+        <span class="emojo" aria-hidden="true">👀</span>
+        <h2>Look at these</h2>
+        <p>The good shit.</p>
+        <ul>
+          <li><a href="//beeps.website">beeps.website</a></li>
+          <li>
+            <a href="//social.beeps.gay/@beeps" rel="me">Fediverse</a>
+            <br><small>Also mirrored on <a href="//bsky.app/profile/beeps.gay" rel="me">Bluesky</a></small>
+          </li>
+          <li>
+            <a href="//en.pronouns.page/@batbeeps">Pronouns.page</a>
+          </li>
+        </ul>
+      </section>
 
-    <h2>Contacts</h2>
-    <p>For the more direct kind of communication.</p>
-    <ul class="page-list">
-      <li>
-        <a href="mailto:hi@beeps.website">hi@beeps.website</a>
-      </li>
-      <li>
-        <a href="//discord.com/users/157982575422341120">batbeeps on Discord</a>
-      </li>
-      <li><a href="//t.me/batbeeps">batbeeps on Telegram</a></li>
-      <li>
-        <a
-          href="//signal.me/#eu/czNR8Uwn86v-jMgx1EceqAULdClA7jSEPrbZhk0MbXjXKyZtZoxH_5eDyDtny-MI"
-          >batbeeps.47 on Signal</a
-        >
-      </li>
-    </ul>
+      <section>
+        <span class="emojo" aria-hidden="true">📣</span>
+        <h2>Lines of contact</h2>
+        <p>Get in touch, for some reason.</p>
+        <ul>
+          <li>
+            Email <a href="mailto:hi@beeps.website">hi@beeps.website</a>
+          </li>
+          <li>
+            <a href="//discord.com/users/157982575422341120">batbeeps on Discord</a>
+          </li>
+          <li><a href="//t.me/batbeeps">batbeeps on Telegram</a></li>
+          <li>
+            <a
+              href="//signal.me/#eu/czNR8Uwn86v-jMgx1EceqAULdClA7jSEPrbZhk0MbXjXKyZtZoxH_5eDyDtny-MI"
+              >batbeeps.47 on Signal</a
+            >
+          </li>
+        </ul>
+      </section>
 
-    <h2>Liminal spaces</h2>
-    <p>These places are passively or infrequently updated.</p>
-    <ul class="page-list">
-      <li>
-        <a href="//music.apple.com/profile/querkmachine">Apple Music</a>
-      </li>
-      <li>
-        <a href="//barq.app/p/wgHW5Ys">Barq</a>
-      </li>
-      <li>
-        <a href="//bsky.app/profile/beeps.gay">Bluesky</a>
-      </li>
-      <li>
-        <a href="//www.duolingo.com/profile/querkmachine">Duolingo</a>
-      </li>
-      <li>
-        <a href="//furaffinity.net/user/batbeeps">Fur Affinity</a>
-      </li>
-      <li>
-        <a href="//furrycorner.boards.net/user/541">Furry Corner</a>
-      </li>
-      <li>
-        <a href="//www.goodreads.com/user/show/29443969-beeps">Goodreads</a>
-      </li>
-      <li>
-        <a href="//ko-fi.com/querkmachine">Ko-fi</a>
-      </li>
-      <li>
-        <a href="//last.fm/user/robomilk">Last.fm</a>
-      </li>
-      <li>
-        <a href="//www.linkedin.com/in/querkmachine/">LinkedIn</a>
-      </li>
-      <li>
-        <a href="//social.beeps.gay/@sqrk">🔞 AD Mastodon</a>
-      </li>
-      <li>
-        <a href="//opencollective.com/beeps">OpenCollective</a>
-      </li>
-      <li>
-        <a href="//en.pronouns.page/@batbeeps">Pronouns.page</a>
-      </li>
-      <li>
-        <a href="//www.puzzmo.com/user/la/beeps">Puzzmo</a>
-      </li>
-      <li>
-        <a href="//www.redbubble.com/people/querkmachine/">Redbubble</a>
-      </li>
-      <li>
-        <a href="//reddit.com/u/querkmachine">Reddit</a>
-      </li>
-      <li>
-        <a href="//steamcommunity.com/id/batbeeps">Steam</a>
-      </li>
-      <li><a href="//trakt.tv/users/batbeeps/">Trakt.tv</a></li>
-      <li><a href="//batbeeps.tumblr.com/">Tumblr</a></li>
-      <li><a href="//forum.ukfur.org/profile/1623-beeps/">ukFur</a></li>
-      <li><a href="//www.weasyl.com/~beeps">Weasyl</a></li>
-      <li><a href="//en.wikifur.com/wiki/User:AlexanderGrey">WikiFur</a></li>
-      <li><a href="//en.wikipedia.org/wiki/User:Robomilk">Wikipedia</a></li>
-      <li><a href="//www.youtube.com/@batbeeps">YouTube</a></li>
-    </ul>
+      <section>
+        <span class="emojo" aria-hidden="true">💻</span>
+        <h2>Codin&rsquo; stuff</h2>
+        <p>Making computer go beep boop since [object Object].</p>
+        <ul>
+          <li><a href="//www.11ty.dev/authors/querkmachine/">Eleventy</a></li>
+          <li><a href="//github.com/querkmachine">GitHub</a></li>
+          <li>
+            <a href="//www.linkedin.com/in/querkmachine/">LinkedIn</a>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <span class="emojo" aria-hidden="true">🧠</span>
+        <h2>Brain go brrrr</h2>
+        <p>Ostensibly the kinds of places where you try to think more better.</p>
+        <ul>
+          <li>
+            <a href="//www.duolingo.com/profile/querkmachine">Duolingo</a>
+          </li>
+          <li>
+            <a href="//www.puzzmo.com/user/la/beeps">Puzzmo</a>
+          </li>
+          <li><a href="//en.wikipedia.org/wiki/User:Robomilk">Wikipedia</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <span class="emojo" aria-hidden="true">🐾</span>
+        <h2>Furry nonsense</h2>
+        <p>The kinds of websites only fuzzy nerds on the internet dare set paw.</p>
+        <ul>
+          <li>
+            <a href="//barq.app/p/wgHW5Ys">Barq</a>
+          </li>
+          <li>
+            <a href="//crittertime.fun/memberlist.php?mode=viewprofile&u=179"
+              >Critter Time</a
+            >
+          </li>
+          <li>
+            <a href="//furaffinity.net/user/batbeeps">Fur Affinity</a>
+          </li>
+          <li>
+            <a href="//furrycorner.boards.net/user/541">Furry Corner</a>
+          </li>
+          <li><a href="//www.furtrack.com/user/batbeeps">FurTrack</a></li>
+          <li><a href="//forum.ukfur.org/profile/1623-beeps/">ukFur</a></li>
+          <li><a href="//www.weasyl.com/~beeps">Weasyl</a></li>
+          <li><a href="//en.wikifur.com/wiki/User:AlexanderGrey">WikiFur</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <span class="emojo" aria-hidden="true">📺</span>
+        <h2>Consuming media</h2>
+        <p>Yummy yummy delicious multimedia franchises omnomnom.</p>
+        <ul>
+          <li>
+            <a href="//music.apple.com/profile/querkmachine">Apple Music</a>
+          </li>
+          <li>
+            <a href="//www.goodreads.com/user/show/29443969-beeps">Goodreads</a>
+          </li>
+          <li>
+            <a href="//last.fm/user/robomilk">Last.fm</a>
+          </li>
+          <li>
+            <a href="//steamcommunity.com/id/batbeeps">Steam</a>
+          </li>
+          <li><a href="//trakt.tv/users/batbeeps/">Trakt.tv</a></li>
+          <li><a href="//www.youtube.com/@batbeeps">YouTube</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <span class="emojo" aria-hidden="true">🤷</span>
+        <h2>These too, I guess</h2>
+        <p>I could&rsquo;ve put these in a group, but I didn&rsquo;t want to. Oh wait&hellip;</p>
+        <ul>
+          <li>
+            <a href="//knockout.chat/user/15201">Knockout</a>
+          </li>
+          <li>
+            <a href="//ko-fi.com/querkmachine">Ko-fi</a>
+          </li>
+          <li>
+            <a href="//opencollective.com/beeps">OpenCollective</a>
+          </li>
+          <li>
+            <a href="//www.redbubble.com/people/querkmachine/">Redbubble</a>
+          </li>
+          <li>
+            <a href="//reddit.com/u/querkmachine">Reddit</a>
+          </li>
+          <li><a href="//batbeeps.tumblr.com/">Tumblr</a></li>
+        </ul>
+      </section>
+
+    </main>
 
     <footer>
       <small
-        >Ash artwork by
+        >Top of page artwork by
         <a style="display: inline" href="https://tuxedodragon.art"
           >TuxedoDragon</a
-        >. Thanks!</small
+        >. Thanks! 💚</small
       >
     </footer>
   </body>
