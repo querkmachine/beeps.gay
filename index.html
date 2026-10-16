@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <title>beeps.gay &mdash; where to find beeps on the internet</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <link
@@ -74,6 +77,13 @@
       }
 
       .emojo {
+        --line-height: 1.1em;
+        --size: calc(
+          var(--line-height) + var(--space-2) * 2 + var(--border-regular) * 2
+        );
+
+        block-size: var(--size);
+        aspect-ratio: 1;
         padding: var(--space-2);
         border-radius: 50%;
         position: absolute;
@@ -83,7 +93,7 @@
         border: var(--border-regular) solid var(--color-furniture);
         background-color: var(--color-surface);
         font-size: var(--size-2);
-        line-height: 1;
+        line-height: var(--line-height);
       }
 
       @container (min-inline-size: 40ch) {
@@ -116,13 +126,10 @@
         src="image.png"
       />
 
-      <h1>
-        Where to find beeps on the internet
-      </h1>
+      <h1>Where to find beeps on the internet</h1>
     </header>
 
     <main>
-
       <section>
         <span class="emojo" aria-hidden="true">👀</span>
         <h2>Look at these</h2>
@@ -131,7 +138,9 @@
           <li><a href="//beeps.website">beeps.website</a></li>
           <li>
             <a href="//social.beeps.gay/@beeps" rel="me">Fediverse</a>
-            <br><small>Also mirrored on <a href="//bsky.app/profile/beeps.gay" rel="me">Bluesky</a></small>
+          </li>
+          <li>
+            <a href="//bsky.app/profile/beeps.gay" rel="me">Bluesky</a>
           </li>
           <li>
             <a href="//en.pronouns.page/@batbeeps">Pronouns.page</a>
@@ -144,11 +153,11 @@
         <h2>Lines of contact</h2>
         <p>Get in touch, for some reason.</p>
         <ul>
+          <li>Email <a href="mailto:hi@beeps.website">hi@beeps.website</a></li>
           <li>
-            Email <a href="mailto:hi@beeps.website">hi@beeps.website</a>
-          </li>
-          <li>
-            <a href="//discord.com/users/157982575422341120">batbeeps on Discord</a>
+            <a href="//discord.com/users/157982575422341120"
+              >batbeeps on Discord</a
+            >
           </li>
           <li><a href="//t.me/batbeeps">batbeeps on Telegram</a></li>
           <li>
@@ -176,8 +185,18 @@
       <section>
         <span class="emojo" aria-hidden="true">💬</span>
         <h2>Fora and fauna</h2>
-        <p>These spots were made for yappin&rsquo;, and that's just what I do.</p>
+        <p>
+          These spots were made for yappin&rsquo;, and that's just what I do.
+        </p>
         <ul>
+          <li>
+            <a href="//crittertime.fun/memberlist.php?mode=viewprofile&u=179"
+              >Critter Time</a
+            >
+          </li>
+          <li>
+            <a href="//furrycorner.boards.net/user/541">Furry Corner</a>
+          </li>
           <li>
             <a href="//knockout.chat/user/15201">Knockout</a>
           </li>
@@ -185,38 +204,32 @@
             <a href="//reddit.com/u/querkmachine">Reddit</a>
           </li>
           <li><a href="//batbeeps.tumblr.com/">Tumblr</a></li>
+          <li><a href="//forum.ukfur.org/profile/1623-beeps/">ukFur</a></li>
         </ul>
       </section>
 
       <section>
         <span class="emojo" aria-hidden="true">🐾</span>
         <h2>Furry nonsense</h2>
-        <p>The kinds of websites only fuzzy nerds on the internet dare to set paw.</p>
+        <p>
+          The kinds of websites only fuzzy nerds on the internet dare to set
+          paw.
+        </p>
         <ul>
           <li>
             <a href="//barq.app/p/wgHW5Ys">Barq</a>
           </li>
           <li>
-            <a href="//crittertime.fun/memberlist.php?mode=viewprofile&u=179"
-              >Critter Time</a
-            >
-          </li>
-          <li>
             <a href="//furaffinity.net/user/batbeeps">Fur Affinity</a>
           </li>
-          <li>
-            <a href="//furrycorner.boards.net/user/541">Furry Corner</a>
-          </li>
           <li><a href="//www.furtrack.com/user/batbeeps">FurTrack</a></li>
-          <li><a href="//forum.ukfur.org/profile/1623-beeps/">ukFur</a></li>
           <li><a href="//www.weasyl.com/~beeps">Weasyl</a></li>
-          <li><a href="//en.wikifur.com/wiki/User:AlexanderGrey">WikiFur</a></li>
         </ul>
       </section>
 
       <section>
         <span class="emojo" aria-hidden="true">📺</span>
-        <h2>Consuming media</h2>
+        <h2>Media consumption</h2>
         <p>Yummy yummy delicious multimedia franchises omnomnom.</p>
         <ul>
           <li>
@@ -239,13 +252,18 @@
       <section>
         <span class="emojo" aria-hidden="true">🧠</span>
         <h2>Brain go brrrr</h2>
-        <p>Ostensibly the kinds of places where you try to think more better.</p>
+        <p>
+          Ostensibly the kinds of places where you try to think more better.
+        </p>
         <ul>
           <li>
             <a href="//www.duolingo.com/profile/querkmachine">Duolingo</a>
           </li>
           <li>
             <a href="//www.puzzmo.com/user/la/beeps">Puzzmo</a>
+          </li>
+          <li>
+            <a href="//en.wikifur.com/wiki/User:AlexanderGrey">WikiFur</a>
           </li>
           <li><a href="//en.wikipedia.org/wiki/User:Robomilk">Wikipedia</a></li>
         </ul>
@@ -254,7 +272,9 @@
       <section>
         <span class="emojo" aria-hidden="true">💸</span>
         <h2>I like money</h2>
-        <p>Mainly giving it away to other people. I&rsquo;m great at business.</p>
+        <p>
+          Mainly giving it away to other people. I&rsquo;m great at business.
+        </p>
         <ul>
           <li>
             <a href="//ko-fi.com/querkmachine">Ko-fi</a>
@@ -267,7 +287,6 @@
           </li>
         </ul>
       </section>
-
     </main>
 
     <footer>
